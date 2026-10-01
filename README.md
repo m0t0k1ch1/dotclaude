@@ -1,1 +1,7 @@
 # dotclaude
+
+## Setup
+
+```
+make setup
+```

@@ -11,8 +11,8 @@ Claude Code のクラウドセッションで読み込む規則。
   - リポジトリの中に別のリポジトリを置かない。
   - 返答のコマンドは `--depth 1` でクローンするので、プッシュする前に `git -C <path> fetch origin <default-branch>` を実行する。実行しないと全ツリーを再送して 413 で拒否される。
   - 429 が返ったら、Retry-After の秒数だけ待って 1 回だけ再試行する。
-- `add_repo` で追加したリポジトリは、クローンしたあとに `register_repo_root` に owner と repo を渡す（`directory` は渡さない）。次のターンから、そのリポジトリの `CLAUDE.md`、skills、plugins が読み込まれる。
-- クローンしたリポジトリの `CLAUDE.md` を読んでから作業する。
+- `add_repo` で追加したリポジトリは、クローンしたあとに `register_repo_root` に owner と repo を渡す（`directory` は渡さない）。そのリポジトリの `CLAUDE.md`（と、そこから `@` で参照するファイル）、skills、plugins が読み込まれ、作業ディレクトリにも追加される。
+- `add_repo` で追加していないリポジトリは、クローンした `CLAUDE.md` を読んでから作業する。
 - Git の操作は `git -C <path>` で対象のリポジトリを明示する。
 - コミットするときは、ファイルを個別に指定して `git add` する。`git add -A` と `git add .` は使わない。
 - 作業を始める前と報告するときに、どのリポジトリで何をしたかを明記する。

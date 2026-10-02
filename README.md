@@ -13,7 +13,7 @@ Claude Code で使う規則と設定。各環境では、必要なファイル�
 set -euo pipefail
 
 mkdir -p ~/.claude/rules
-ln -sf /home/user/dotclaude/rules/*.md ~/.claude/rules/
+ln -sf /home/user/dotclaude/rules/common.md ~/.claude/rules/
 ```
 
 ⚠️ セットアップスクリプトは、環境のキャッシュを作るときにしか実行されない。そのため、このリポジトリの中身を更新しただけでは、クラウドセッションに反映されないことがある。

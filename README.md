@@ -1,4 +1,4 @@
-# dotclaude
+# .claude
 
 Claude Code で使う規則と設定。各環境では、必要なファイルを `~/.claude/` 配下から参照して使う。
 

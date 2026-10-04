@@ -13,7 +13,8 @@ Claude Code で使う規則と設定。各環境では、必要なファイル�
 set -euo pipefail
 
 mkdir -p ~/.claude/rules
-ln -sf /home/user/dotclaude/rules/common.md ~/.claude/rules/
+ln -sf /home/user/dotclaude/settings.json ~/.claude/settings.json
+ln -sf /home/user/dotclaude/rules/common.md ~/.claude/rules/common.md
 ```
 
 ## 保守

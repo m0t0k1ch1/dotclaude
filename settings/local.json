@@ -1,0 +1,14 @@
+{
+  "enabledPlugins": {
+    "gopls-lsp@claude-plugins-official": true
+  },
+  "env": {
+    "CLAUDE_CODE_SUBAGENT_MODEL": "sonnet"
+  },
+  "model": "fable",
+  "permissions": {
+    "defaultMode": "plan"
+  },
+  "theme": "auto",
+  "tui": "fullscreen"
+}
